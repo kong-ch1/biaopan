@@ -8,6 +8,10 @@
 - `流体模式`：根据板载 IMU 倾斜方向驱动液体粒子流动
 
 目标是保留 BSP 原有工程结构，同时提供可直接编译、烧录、演示的版本。
+### 流体模拟效果演示
+![流体模拟1](videos/watch_face/fluid_sim/1_part1.gif)
+![流体模拟2](videos/watch_face/fluid_sim/1_part2.gif)
+![流体模拟3](videos/watch_face/fluid_sim/1_part3.gif)
 
 ## 看这个项目先看哪里
 
