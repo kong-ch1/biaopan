@@ -84,7 +84,4 @@ git remote add origin <你的仓库地址>
 git push -u origin main
 ```
 
-## 说明
 
-- 主要逻辑集中在 `main/watch_face.c`
-- 如果后续继续迭代，建议保留版本标签，不要删除旧版本历史
