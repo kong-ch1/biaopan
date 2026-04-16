@@ -1,0 +1,24 @@
+menu "Watch Face Configuration"
+
+    config WATCH_WIFI_SSID
+        string "WiFi SSID for NTP sync"
+        default ""
+
+    config WATCH_WIFI_PASSWORD
+        string "WiFi password for NTP sync"
+        default ""
+
+    config WATCH_WIFI_MAXIMUM_RETRY
+        int "WiFi maximum retry count"
+        range 1 20
+        default 8
+
+    config WATCH_NTP_SERVER
+        string "NTP server"
+        default "ntp.aliyun.com"
+
+    config WATCH_TIMEZONE
+        string "Timezone"
+        default "CST-8"
+
+endmenu

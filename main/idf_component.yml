@@ -1,0 +1,11 @@
+description: BSP Display example with camera preview
+
+dependencies:
+  bsp_selector:
+    version: '*'
+    override_path: ../../../components/bsp_selector
+
+  espressif/esp_lvgl_port:
+    version: '^2'
+    override_path: ../../../components/esp_lvgl_port
+
