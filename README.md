@@ -80,18 +80,20 @@ python send_date_cmd.py --port COM3
 2. 构建项目
 在项目目录下执行以下命令：
 进入项目目录：```text
-datecd /workspace/ChronosFluid
+date cd /workspace/ChronosFluid
+
 构建项目：```text
-dateidf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
+date idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
+
 或者使用 Windows 批处理脚本：
 ```text
-datebuild_watch.bat
+date build_watch.bat
 
 3. 烧录到开发板
 ```text
-dateidf.py -p <你的串口> flash
+date idf.py -p <你的串口> flash
 如```text
-dateidf.py -p COM3 flash
+date idf.py -p COM3 flash
 
 
 ```
