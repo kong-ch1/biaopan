@@ -71,31 +71,53 @@ python send_date_cmd.py --port COM3
 
 ##  教学步骤
 
+ChronosFluid 烧录教程
 1. 准备工作
-首先确保你已经：
-安装了 ESP-IDF v5.4.x
-拥有 ESP32-S3-EYE 开发板
-连接好开发板到电脑（通过 USB）
+在开始之前，请确保你已经准备好：
 
+✅ 安装了 ESP-IDF v5.4.x
+✅ 拥有 ESP32-S3-EYE 开发板
+✅ 用 USB 线连接好开发板到电脑
 2. 构建项目
-在项目目录下执行以下命令：
-进入项目目录：```text
-date cd /workspace/ChronosFluid
+进入项目目录
 
-构建项目：```text
-date idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
+Bash
 
-或者使用 Windows 批处理脚本：
-```text
-date build_watch.bat
+cd /workspace/ChronosFluid
+编译构建
 
+Bash
+
+idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
+Windows 用户：也可以直接运行批处理脚本：
+
+
+Bash
+
+build_watch.bat
 3. 烧录到开发板
-```text
-date idf.py -p <你的串口> flash
-如```text
-date idf.py -p COM3 flash
+查找串口
+首先确定你的开发板串口号：
+
+Windows：设备管理器 → 端口 (COM 和 LPT)
+Linux：ls /dev/ttyUSB* 或 ls /dev/ttyACM*
+macOS：ls /dev/tty.usb*
+执行烧录
+
+Bash
+
+idf.py -p <你的串口> flash
+示例：
 
 
+Bash
+
+idf.py -p COM3 flash
+4. 监控串口输出（可选）
+
+Bash
+
+idf.py -p <你的串口> monitor
 ```
 
 
