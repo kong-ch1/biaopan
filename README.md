@@ -81,7 +81,6 @@ python send_date_cmd.py --port COM3
 在项目目录下执行以下命令：
 进入项目目录：cd /workspace/ChronosFluid
 构建项目：idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
-
 或者使用 Windows 批处理脚本：
 build_watch.bat
 
