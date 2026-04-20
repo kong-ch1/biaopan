@@ -86,16 +86,12 @@ python send_date_cmd.py --port COM3
 ### 进入项目目录
 ```bash
 cd /workspace/ChronosFluid
-
-
-Plain Text
+```
 
 ### 编译构建
 ```bash
 idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
-
-
-Plain Text
+```
 
 > **Windows 用户**：也可以直接运行批处理脚本：
 > ```bash
@@ -113,23 +109,17 @@ Plain Text
 ### 执行烧录
 ```bash
 idf.py -p <你的串口> flash
-
-
-Plain Text
+```
 
 **示例**：
 ```bash
 idf.py -p COM3 flash
-
-
-Plain Text
+```
 
 ## 4. 监控串口输出（可选）
 ```bash
 idf.py -p <你的串口> monitor
-
-
-Plain Text
+```
 
 ---
 
@@ -137,9 +127,7 @@ Plain Text
 如果你想一键完成构建、烧录、监控：
 ```bash
 idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye -p COM3 build flash monitor
-
-
-Plain Text
+```
 
 ---
 
@@ -148,6 +136,3 @@ Plain Text
 - 主程序：main/main.c
 - 表盘功能：main/watch_face.c
 - 时间设置脚本：send_date_cmd.py
-```
-
-
