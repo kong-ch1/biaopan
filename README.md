@@ -93,7 +93,7 @@ cd /workspace/ChronosFluid
 idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
 ```
 
-> **Windows 用户**：也可以直接运行批处理脚本：
+> **Windows 用户**：可以直接运行批处理脚本：
 > ```bash
 > build_watch.bat
 > ```
