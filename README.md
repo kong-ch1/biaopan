@@ -69,19 +69,27 @@ date 040217302026
 python send_date_cmd.py --port COM3
 ```
 
-## 上传到 GitHub
+##  教学步骤
 
-1. 在 GitHub 新建空仓库（例如 `ChronosFluid`）
-2. 将本目录内容全部上传
-3. 首次提交建议加一个版本标签，例如 `v2.0.0`
+1. 准备工作
+首先确保你已经：
+安装了 ESP-IDF v5.4.x
+拥有 ESP32-S3-EYE 开发板
+连接好开发板到电脑（通过 USB）
 
-```bash
-git init
-git add .
-git commit -m "feat: chronosfluid baseline"
-git branch -M main
-git remote add origin <你的仓库地址>
-git push -u origin main
+2. 构建项目
+在项目目录下执行以下命令：
+进入项目目录：cd /workspace/ChronosFluid
+构建项目：idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
+
+或者使用 Windows 批处理脚本：
+build_watch.bat
+
+3. 烧录到开发板
+idf.py -p <你的串口> flash
+如idf.py -p COM3 flash
+
+
 ```
 
 
