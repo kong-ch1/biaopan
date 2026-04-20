@@ -71,53 +71,83 @@ python send_date_cmd.py --port COM3
 
 ##  教学步骤
 
-ChronosFluid 烧录教程
-1. 准备工作
+# ChronosFluid 烧录教程
+
+## 1. 准备工作
+
 在开始之前，请确保你已经准备好：
 
-✅ 安装了 ESP-IDF v5.4.x
-✅ 拥有 ESP32-S3-EYE 开发板
-✅ 用 USB 线连接好开发板到电脑
-2. 构建项目
-进入项目目录
+- ✅ 安装了 **ESP-IDF v5.4.x**
+- ✅ 拥有 **ESP32-S3-EYE** 开发板
+- ✅ 用 USB 线连接好开发板到电脑
 
-Bash
+## 2. 构建项目
 
+### 进入项目目录
+```bash
 cd /workspace/ChronosFluid
-编译构建
 
-Bash
 
+Plain Text
+
+### 编译构建
+```bash
 idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye build
-Windows 用户：也可以直接运行批处理脚本：
 
 
-Bash
+Plain Text
 
-build_watch.bat
-3. 烧录到开发板
-查找串口
+> **Windows 用户**：也可以直接运行批处理脚本：
+> ```bash
+> build_watch.bat
+> ```
+
+## 3. 烧录到开发板
+
+### 查找串口
 首先确定你的开发板串口号：
+- **Windows**：设备管理器 → 端口 (COM 和 LPT)
+- **Linux**：`ls /dev/ttyUSB*` 或 `ls /dev/ttyACM*`
+- **macOS**：`ls /dev/tty.usb*`
 
-Windows：设备管理器 → 端口 (COM 和 LPT)
-Linux：ls /dev/ttyUSB* 或 ls /dev/ttyACM*
-macOS：ls /dev/tty.usb*
-执行烧录
-
-Bash
-
+### 执行烧录
+```bash
 idf.py -p <你的串口> flash
-示例：
 
 
-Bash
+Plain Text
 
+**示例**：
+```bash
 idf.py -p COM3 flash
-4. 监控串口输出（可选）
 
-Bash
 
+Plain Text
+
+## 4. 监控串口输出（可选）
+```bash
 idf.py -p <你的串口> monitor
+
+
+Plain Text
+
+---
+
+## 快速开始（一行命令）
+如果你想一键完成构建、烧录、监控：
+```bash
+idf.py -D SDKCONFIG_DEFAULTS=sdkconfig.bsp.esp32_s3_eye -p COM3 build flash monitor
+
+
+Plain Text
+
+---
+
+## 相关文件参考
+- 项目配置：sdkconfig.bsp.esp32_s3_eye
+- 主程序：main/main.c
+- 表盘功能：main/watch_face.c
+- 时间设置脚本：send_date_cmd.py
 ```
 
 
