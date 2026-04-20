@@ -85,7 +85,7 @@ python send_date_cmd.py --port COM3
 
 ### 进入项目目录
 ```bash
-cd /workspace/ChronosFluid
+cd /文件目录/ChronosFluid-chronosfluid-2.0
 ```
 
 ### 编译构建
